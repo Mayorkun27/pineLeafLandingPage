@@ -6,21 +6,13 @@
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    font-weight: 400;
 }
 /* #eab308
 #000000
 #ffffff
 #2f5318 */
 
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-weight: 400;
-}
 :root{
     --calculation: 1;
 }
@@ -144,11 +136,11 @@ body{
 
 @media (min-width: 768px) and (max-width: 991px) {
     main .pointers{
-        transform: translateY(-60%) translateX(-5%);
-        width: 110%;
-        rotate: 10deg;
+        transform: translateY(-100%) translateX(-10%) !important;
+        width: 110% !important;
+        rotate: 20deg;
         & button{
-            rotate: -10deg;
+            rotate: -20deg;
         }
     }
 }
@@ -157,7 +149,7 @@ body{
    
     main {
         & .pointers{
-            transform: translateY(-90%) translateX(-20%) !important;
+            transform: translateY(-85%) translateX(-22%) !important;
             width: 120% !important;
             rotate: 30deg;
             & button{

@@ -5,8 +5,6 @@ let main = document.querySelector("main");
 let cont = document.querySelector(".cont");
 let product = main.querySelectorAll(".product");
 
-// let indicator = carousel.querySelector(".indicators");
-// let dots = indicator.querySelectorAll("ul li");
 let active = 0;
 let firstPosition = 0;
 let lastPosition = product.length - 1;
@@ -18,7 +16,7 @@ const startAutoPlay = () => {
         nextBtn.click()
     }, 5000)
 }
-// startAutoPlay()
+startAutoPlay()
 
 const setSlider = () => {
     let itemActiveOld = main.querySelector(".product.active");
@@ -53,15 +51,6 @@ const setSlider = () => {
         }, 3000);
     })
 
-    // let dotActiveOld = indicator.querySelector("li.active");
-    // if (dotActiveOld) {
-    //     dotActiveOld.classList.remove("active")
-    // }
-    // dots[active].classList.add("active")
-
-    // indicator.querySelector(".number").innerText = `0${active + 1}`;
-    // startAutoPlay();
-
     if (active == 0) {
         cont.style.background = "linear-gradient(to top, #000000e8 20%, #00000018), url(images/img5.png)";
         cont.style.backgroundPosition = "top"
@@ -94,10 +83,3 @@ prevBtn.addEventListener("click", () => {
     document.documentElement.style.setProperty("--calculation", -1);
     setSlider();
 })
-
-// dots.forEach((dot, position) => {
-//     dot.onclick = () => {
-//         active = position
-//         setSlider()
-//     }
-// })

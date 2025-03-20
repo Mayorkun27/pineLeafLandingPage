@@ -25,15 +25,9 @@ const setSlider = () => {
     }
     product[active].classList.add("active")
     let eachredirect = product[active].getAttribute("data-link")
-    console.log(eachredirect)
     let productBtn = product[active].querySelector("button")
-    if (productBtn) {
-        console.log("seen")
-    } else {
-        console.log("not seen")
-    }
+    
     productBtn.addEventListener("click", () => {
-        console.log("clicked")
         productBtn.setAttribute("disabled", true);
         productBtn.textContent = "Redirecting..."
 
@@ -41,7 +35,6 @@ const setSlider = () => {
         tempAncTag.setAttribute("href", eachredirect)
         tempAncTag.setAttribute("target", "_blank")
         tempAncTag.setAttribute("rel", "noopener noreferrer")
-        console.log(tempAncTag)
         setTimeout(() => {
             productBtn.removeAttribute("disabled");
             productBtn.textContent = "Visit Page";
